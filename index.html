@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvant — Інтернет-магазин смартфонів та цифрової техніки</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-info">
+                <span><i class="fa-solid fa-truck-fast"></i> Безкоштовна доставка від 2000 ₴</span>
+                <span><i class="fa-solid fa-shield-halved"></i> Офіційна гарантія 12 місяців</span>
+            </div>
+            <div class="top-bar-contacts">
+                <a href="tel:0800300123"><i class="fa-solid fa-phone"></i> 0 800 300 123</a>
+                <span><i class="fa-solid fa-clock"></i> Щодня 9:00 - 21:00</span>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container header-container">
+            <a href="#home" class="logo nav-link">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-bolt-lightning"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">KVANT</span>
+                    <span class="logo-sub">Digital Store</span>
+                </div>
+            </a>
+            <div class="header-search">
+                <input type="text" id="searchInput" placeholder="Пошук смартфонів, навушників, ґаджетів...">
+                <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Головна</a>
+                <a href="#catalog" class="nav-link">Каталог</a>
+                <a href="#about" class="nav-link">Про нас</a>
+            </nav>
+            <div class="header-actions">
+                <button class="action-btn" id="compareBtn" title="Порівняння товарів">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span class="badge" id="compareBadge">0</span>
+                </button>
+                <button class="action-btn" id="wishlistBtn" title="Обране">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="badge" id="wishlistBadge">0</span>
+                </button>
+                <button class="action-btn cart-action-btn" id="cartBtn" title="Кошик">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge" id="cartBadge">0</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                <span class="logo-name">KVANT</span>
+            </div>
+            <button id="mobileMenuClose"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="#home" class="nav-link mobile-nav-link">Головна</a>
+            <a href="#catalog" class="nav-link mobile-nav-link">Каталог товарів</a>
+            <a href="#about" class="nav-link mobile-nav-link">Про нас та контакти</a>
+        </nav>
+    </div>
+    <main id="mainContent">
+        <section id="page-home" class="page active-page">
+            <section class="hero">
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <div class="hero-badge"><span>🔥 Новинка 2026</span> Ера Apple Intelligence</div>
+                        <h1>Флагманські смартфони та цифрова техніка</h1>
+                        <p>Відкрийте неперевершену потужність, футуристичні камери та бездоганний дизайн у магазині Kvant.</p>
+                        <div class="hero-btns">
+                            <a href="#catalog" class="btn btn-primary nav-link">Перейти в каталог <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="#about" class="btn btn-outline nav-link">Дізнатися більше</a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <h3>15K+</h3>
+                                <p>Задоволених клієнтів</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>100%</h3>
+                                <p>Оригінальна техніка</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>24/7</h3>
+                                <p>Підтримка покупців</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="hero-glow"></div>
+                        <img src="images/banner.jpg" alt="iPhone 16 Pro Max">
+                    </div>
+                </div>
+            </section>
+            <section class="section categories-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Популярні категорії</h2>
+                        <a href="#catalog" class="view-all nav-link" data-cat="all">Усі категорії <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                    <div class="categories-grid">
+                        <div class="category-card" data-category="smartphones">
+                            <div class="cat-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <h3>Смартфони</h3>
+                            <p>Apple, Samsung, Google Pixel</p>
+                        </div>
+                        <div class="category-card" data-category="laptops">
+                            <div class="cat-icon"><i class="fa-solid fa-laptop"></i></div>
+                            <h3>Ноутбуки</h3>
+                            <p>MacBook, ультрабуки, геймінг</p>
+                        </div>
+                        <div class="category-card" data-category="tablets">
+                            <div class="cat-icon"><i class="fa-solid fa-tablet-screen-button"></i></div>
+                            <h3>Планшети</h3>
+                            <p>iPad, Galaxy Tab, стілуси</p>
+                        </div>
+                        <div class="category-card" data-category="watches">
+                            <div class="cat-icon"><i class="fa-solid fa-clock"></i></div>
+                            <h3>Смарт-годинники</h3>
+                            <p>Apple Watch, Garmin, фітнес</p>
+                        </div>
+                        <div class="category-card" data-category="audio">
+                            <div class="cat-icon"><i class="fa-solid fa-headphones"></i></div>
+                            <h3>Аудіо</h3>
+                            <p>Навушники, колонки ANC</p>
+                        </div>
+                        <div class="category-card" data-category="accessories">
+                            <div class="cat-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <h3>Аксесуари</h3>
+                            <p>PowerBank, зарядки, чохли</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section flash-section">
+                <div class="container">
+                    <div class="flash-header">
+                        <div class="flash-title">
+                            <h2><i class="fa-solid fa-fire text-orange"></i> Гарячі знижки дня</h2>
+                            <p>Кількість акційних товарів обмежена!</p>
+                        </div>
+                        <div class="flash-timer" id="flashTimer">
+                            <div class="timer-box"><span id="hours">08</span><small>год</small></div>:
+                            <div class="timer-box"><span id="minutes">34</span><small>хв</small></div>:
+                            <div class="timer-box"><span id="seconds">52</span><small>сек</small></div>
+                        </div>
+                    </div>
+                    <div class="products-grid" id="flashProductsGrid">
+                    </div>
+                </div>
+            </section>
+            <section class="features-banner">
+                <div class="container features-grid">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <div>
+                            <h4>Швидка доставка</h4>
+                            <p>Новою поштою за 1-2 дні по всій Україні</p>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <div>
+                            <h4>Зручна оплата</h4>
+                            <p>Оплата при отриманні, карткою або розстрочка</p>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        <div>
+                            <h4>Обмін та повернення</h4>
+                            <p>Протягом 14 днів без зайвих питань</p>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fa-solid fa-headset"></i>
+                        <div>
+                            <h4>Експертна підтримка</h4>
+                            <p>Допоможемо обрати найкращий гаджет</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="page-catalog" class="page">
+            <div class="container catalog-page-container">
+                <aside class="filters-sidebar" id="filtersSidebar">
+    <div class="sidebar-header">
+        <h3><i class="fa-solid fa-filter"></i> Фільтри</h3>
+        <button id="clearFiltersBtn">Скинути</button>
+    </div>
+
+    <div class="filter-group">
+        <h4>Категорії</h4>
+        <div class="filter-options" id="categoryFilters">
+            <label><input type="checkbox" name="category" value="all" checked> Усі категорії</label>
+            <label><input type="checkbox" name="category" value="smartphones"> Смартфони</label>
+            <label><input type="checkbox" name="category" value="laptops"> Ноутбуки</label>
+            <label><input type="checkbox" name="category" value="tablets"> Планшети</label>
+            <label><input type="checkbox" name="category" value="audio"> Аудіо</label>
+            <label><input type="checkbox" name="category" value="accessories"> Аксесуари</label>
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <h4>Виробник</h4>
+        <div class="filter-options" id="brandFilters">
+            <label><input type="checkbox" name="brand" value="Apple"> Apple</label>
+            <label><input type="checkbox" name="brand" value="Samsung"> Samsung</label>
+            <label><input type="checkbox" name="brand" value="Google"> Google</label>
+            <label><input type="checkbox" name="brand" value="Sony"> Sony</label>
+        </div>
+    </div>
+</aside>
+                <div class="catalog-content">
+                    <div class="catalog-top-bar">
+                        <button class="filter-toggle-btn" id="filterToggleBtn"><i class="fa-solid fa-sliders"></i> Фільтри</button>
+                        <p class="results-count" id="resultsCount">Знайдено товарів: <span>0</span></p>
+                        <div class="sort-wrapper">
+                            <label for="sortSelect">Сортування:</label>
+                            <select id="sortSelect">
+                                <option value="popular">За популярністю</option>
+                                <option value="cheap">Від дешевих до дорогих</option>
+                                <option value="expensive">Від дорогих до дешевих</option>
+                                <option value="rating">За рейтингом</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="products-grid catalog-grid" id="catalogProductsGrid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page-about" class="page">
+            <div class="container about-container">
+                <div class="about-hero">
+                    <div class="about-badge"><i class="fa-solid fa-bolt"></i> Про інтернет-магазин Kvant</div>
+                    <h1>Технології майбутнього вже сьогодні</h1>
+                    <p class="about-lead"><strong>Kvant</strong> — це сучасний мультибрендовий інтернет-магазин смартфонів, флагманських ноутбуків та преміальної цифрової техніки з безкомпромісним рівнем сервісу.</p>
+                </div>
+                <div class="about-features">
+                    <div class="about-card">
+                        <div class="about-icon"><i class="fa-solid fa-award"></i></div>
+                        <h3>Тільки оригінал</h3>
+                        <p>Ми співпрацюємо виключно з офіційними дистриб'юторами та надаємо повну гарантію виробника.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                        <h3>Миттєве відправлення</h3>
+                        <p>Замовлення, оформлені до 16:00, відправляються в той же день. Доставка по Україні за 24-48 годин.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                        <h3>Турбота про клієнтів</h3>
+                        <p>Наші консультанти допоможуть підібрати ідеальний гаджет під ваші завдання та бюджет.</p>
+                    </div>
+                </div>
+                <div class="faq-section">
+                    <h2>Часті запитання (FAQ)</h2>
+                    <div class="faq-accordion">
+                        <div class="faq-item">
+                            <div class="faq-question">Як оформити замовлення в інтернет-магазині Kvant? <i class="fa-solid fa-chevron-down"></i></div>
+                            <div class="faq-answer"><p>Ви можете обрати товар у каталозі, додати його в кошик та натиснути кнопку «Оформити замовлення». Заповніть ваші дані, і наш менеджер зв'яжеться з вами для підтвердження.</p></div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Чи є офіційна гарантія на товари? <i class="fa-solid fa-chevron-down"></i></div>
+                            <div class="faq-answer"><p>Так, на всі смартфони та цифрову техніку поширюється офіційна гарантія від виробника строком від 12 до 24 місяців.</p></div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Які способи оплати доступні? <i class="fa-solid fa-chevron-down"></i></div>
+                            <div class="faq-answer"><p>Ви можете сплатити замовлення банківською карткою онлайн, післяплатою при отриманні у відділенні Нової Пошти, або оформити розстрочку від провідних банків України.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <div class="contact-info-card">
+                        <h2>Контакти та адреси</h2>
+                        <ul class="contact-list">
+                            <li><i class="fa-solid fa-location-dot"></i> м. Київ, вул. Хрещатик, 24 (шоурум Kvant)</li>
+                            <li><i class="fa-solid fa-phone"></i> 0 800 300 123 (безкоштовно по Україні)</li>
+                            <li><i class="fa-solid fa-envelope"></i> support@kvant.store</li>
+                            <li><i class="fa-solid fa-clock"></i> Пн-Нд: 09:00 - 21:00</li>
+                        </ul>
+                    </div>
+                    <div class="contact-form-card">
+                        <h2>Зв'язатися з нами</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" placeholder="Ваше ім'я" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Номер телефону" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Ваше повідомлення чи запитання" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Надіслати повідомлення</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="#home" class="logo nav-link">
+                    <div class="logo-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                    <span class="logo-name">KVANT</span>
+                </a>
+                <p>Інтернет-магазин сучасних смартфонів та преміальної цифрової техніки.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Навігація</h4>
+                <ul>
+                    <li><a href="#home" class="nav-link">Головна сторінка</a></li>
+                    <li><a href="#catalog" class="nav-link">Каталог товарів</a></li>
+                    <li><a href="#about" class="nav-link">Про нас та FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Категорії</h4>
+                <ul>
+                    <li><a href="#catalog" class="nav-link" data-cat="smartphones">Смартфони</a></li>
+                    <li><a href="#catalog" class="nav-link" data-cat="laptops">Ноутбуки</a></li>
+                    <li><a href="#catalog" class="nav-link" data-cat="tablets">Планшети</a></li>
+                    <li><a href="#catalog" class="nav-link" data-cat="watches">Смарт-годинники</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Розсилка</h4>
+                <p>Підпишіться, щоб отримувати промокоди та знижки першими!</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Ваш Email" required>
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Kvant Store. Усі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="drawer-overlay" id="cartOverlay"></div>
+    <div class="drawer" id="cartDrawer">
+        <div class="drawer-header">
+            <h3><i class="fa-solid fa-bag-shopping"></i> Кошик (<span id="cartCountHeader">0</span>)</h3>
+            <button class="close-drawer" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="shipping-progress">
+            <div class="shipping-progress-text" id="shippingProgressText">Додайте товар на 2000 ₴ для безкоштовної доставки</div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" id="shippingProgressBar"></div></div>
+        </div>
+        <div class="drawer-body" id="cartItemsContainer">
+        </div>
+        <div class="drawer-footer">
+            <div class="promo-box">
+                <input type="text" id="promoInput" placeholder="Промокод (напр. KVANT10)">
+                <button id="applyPromoBtn">Застосувати</button>
+            </div>
+            <div class="cart-summary">
+                <div class="summary-row"><span>Сума:</span><span id="cartSubtotal">0 ₴</span></div>
+                <div class="summary-row discount-row" id="discountRow" style="display: none;"><span>Знижка:</span><span id="cartDiscount">0 ₴</span></div>
+                <div class="summary-row total-row"><span>До сплати:</span><span id="cartTotal">0 ₴</span></div>
+            </div>
+            <button class="btn btn-primary checkout-btn" id="checkoutBtn">Оформити замовлення</button>
+        </div>
+    </div>
+    <div class="drawer-overlay" id="wishlistOverlay"></div>
+    <div class="drawer" id="wishlistDrawer">
+        <div class="drawer-header">
+            <h3><i class="fa-solid fa-heart"></i> Обране (<span id="wishlistCountHeader">0</span>)</h3>
+            <button class="close-drawer" id="closeWishlistBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-body" id="wishlistItemsContainer">
+        </div>
+    </div>
+    <div class="modal-overlay" id="compareModalOverlay">
+        <div class="modal compare-modal">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-scale-balanced"></i> Порівняння товарів (<span id="compareModalCount">0</span>/3)</h3>
+                <button class="close-modal" id="closeCompareModal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="compareModalBody">
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="quickViewOverlay">
+        <div class="modal quick-view-modal">
+            <button class="close-modal" id="closeQuickView"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body" id="quickViewBody">
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="checkoutOverlay">
+        <div class="modal checkout-modal">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-credit-card"></i> Оформлення замовлення</h3>
+                <button class="close-modal" id="closeCheckoutModal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="checkoutForm">
+                    <div class="form-section-title">1. Контактні дані</div>
+                    <div class="form-row">
+                        <div class="form-group"><input type="text" id="orderName" placeholder="Прізвище та ім'я *" required></div>
+                        <div class="form-group"><input type="tel" id="orderPhone" placeholder="Телефон (+380...) *" required></div>
+                    </div>
+                    <div class="form-group"><input type="email" id="orderEmail" placeholder="Email для чеку *" required></div>
+                    <div class="form-section-title">2. Доставка</div>
+                    <div class="form-group">
+                        <select id="deliveryMethod">
+                            <option value="nova_poshta">Нова Пошта (відділення / поштомат)</option>
+                            <option value="courier">Кур'єр Нової Пошти до дверей</option>
+                            <option value="pickup">Самовивіз із шоуруму Kvant (Київ)</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><input type="text" id="orderCity" placeholder="Місто / населений пункт *" required></div>
+                    <div class="form-group"><input type="text" id="orderAddress" placeholder="Номер відділення Нової Пошти або адреса *" required></div>
+                    <div class="form-section-title">3. Оплата</div>
+                    <div class="payment-options">
+                        <label><input type="radio" name="payment" value="cod" checked> Оплата при отриманні (накладений платіж)</label>
+                        <label><input type="radio" name="payment" value="card"> Банківською карткою онлайн (LiqPay / Apple Pay)</label>
+                        <label><input type="radio" name="payment" value="installments"> Покупка частинами (Monobank / PrivatBank)</label>
+                    </div>
+                    <div class="checkout-footer-total">
+                        <span>Разом до сплати:</span>
+                        <strong id="checkoutFinalTotal">0 ₴</strong>
+                    </div>
+                    <button type="submit" class="btn btn-primary checkout-submit-btn">Підтвердити замовлення</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">Товар додано до кошика!</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
